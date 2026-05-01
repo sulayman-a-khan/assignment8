@@ -1,6 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
+
+export const metadata = {
+  title: "Courses",
+  description: "Browse our catalog of world-class courses.",
+};
 import { motion } from "framer-motion";
 import CourseCard from "@/components/CourseCard";
 import { getAllCourses } from "@/lib/courses";

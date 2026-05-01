@@ -101,7 +101,7 @@ export default function CourseCard({ course, index = 0 }) {
             id={`view-course-${course.id}`}
             className="group/btn flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary-500/10 hover:bg-primary-500/20 border border-primary-500/20 hover:border-primary-500/40 text-primary-400 hover:text-primary-300 text-sm font-semibold transition-all duration-200"
           >
-            View Course
+            View Details
             <FiArrowRight
               size={14}
               className="transition-transform group-hover/btn:translate-x-1"

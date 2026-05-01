@@ -72,7 +72,7 @@ const tips = [
 ];
 
 export default function HomePage() {
-  const topCourses = getTopRatedCourses(3);
+  const topCourses = getTopRatedCourses(6);
   const trending = getTrendingCourses(4);
   const instructors = getInstructors().slice(0, 4);
 

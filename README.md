@@ -21,7 +21,7 @@ SkillSphere is an interactive and visually striking online learning platform des
 
 ---
 
-## ✨ Key Features
+## ✨ Key Feature
 
 - **🔐 Secure Authentication:** Seamless login and registration with Email and Google OAuth integrations.
 - **🛡️ Protected Routes:** Robust middleware-based route protection to ensure privacy for authenticated users.

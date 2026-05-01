@@ -127,7 +127,7 @@ export default function RegisterPage() {
       >
         <div className="glass-card neon-border p-8">
           {/* Logo */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg">
                 <HiSparkles className="text-white text-xl" />
@@ -139,16 +139,14 @@ export default function RegisterPage() {
             <h1 className="font-display text-2xl font-700 text-white mb-1">
               Create Account
             </h1>
-            <p className="text-white/40 text-sm">
-              Join 50,000+ learners today — it&apos;s free
-            </p>
+            <p className="text-white/40 text-sm">Join our community of learners</p>
           </div>
 
           {/* Google */}
           <button
             onClick={handleGoogle}
             disabled={googleLoading}
-            id="google-signup-btn"
+            id="reg-google-btn"
             className="w-full flex items-center justify-center gap-3 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 hover:text-white text-sm font-medium transition-all duration-200 mb-5"
           >
             {googleLoading ? (

@@ -4,9 +4,7 @@ export default async function middleware(request) {
   const { pathname } = request.nextUrl;
 
   // Define protected routes
-  const isProtectedRoute = 
-    pathname.startsWith("/profile") || 
-    (pathname.startsWith("/courses/") && pathname !== "/courses");
+  const isProtectedRoute = pathname.startsWith("/profile");
 
   if (isProtectedRoute) {
     // Check for session cookie

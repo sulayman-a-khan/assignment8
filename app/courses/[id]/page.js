@@ -40,9 +40,7 @@ export default function CourseDetailsPage({ params }) {
 
   if (isPending) return <Loader fullPage />;
 
-  if (!session && !isPending) {
-    return null; // Should be handled by middleware, but safety first
-  }
+  // Course is now public, anyone can view it.
 
   return (
     <div className="page-container pb-20">

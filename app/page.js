@@ -220,7 +220,7 @@ export default function HomePage() {
                     {[1, 2, 3, 4, 5].map(i => <FiStar key={i} size={12} className="fill-current" />)}
                   </div>
                   <p className="text-xs text-white/70 italic mb-3 leading-relaxed">
-                    "This platform completely transformed my career. The projects are incredible."
+                    &quot;This platform completely transformed my career. The projects are incredible.&quot;
                   </p>
                   <div className="flex items-center gap-2">
                     <img src="https://i.pravatar.cc/100?img=5" alt="Sarah" className="w-6 h-6 rounded-full" />

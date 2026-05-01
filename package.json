@@ -6,14 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
     "@better-auth/client": "^0.0.2-alpha.3",
+    "@neondatabase/serverless": "^1.1.0",
     "axios": "^1.15.2",
     "better-auth": "^1.6.9",
-    "better-sqlite3": "^12.9.0",
     "daisyui": "^5.5.19",
+    "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "framer-motion": "^12.38.0",
     "next": "14.2.35",
@@ -24,6 +26,7 @@
     "swiper": "^12.1.3"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.31.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "postcss": "^8",

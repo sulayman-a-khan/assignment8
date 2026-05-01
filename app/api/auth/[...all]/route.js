@@ -1,28 +1,4 @@
 import { auth } from "@/lib/auth";
 import { toNextJsHandler } from "better-auth/next-js";
 
-const handler = toNextJsHandler(auth);
-
-export const GET = async (req) => {
-  try {
-    return await handler.GET(req);
-  } catch (error) {
-    console.error("Auth GET Error:", error);
-    return new Response(JSON.stringify({ error: error.message || "Internal Server Error" }), { 
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
-  }
-};
-
-export const POST = async (req) => {
-  try {
-    return await handler.POST(req);
-  } catch (error) {
-    console.error("Auth POST Error:", error);
-    return new Response(JSON.stringify({ error: error.message || "Internal Server Error" }), { 
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
-  }
-};
+export const { GET, POST } = toNextJsHandler(auth);

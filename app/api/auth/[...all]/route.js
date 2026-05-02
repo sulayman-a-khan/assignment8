@@ -6,12 +6,22 @@ const handler = toNextJsHandler(auth);
 // Helper to fix hyphenated URLs from older client versions
 const rewriteUrl = (req) => {
   const url = new URL(req.url);
-  if (url.pathname.includes("sign-in")) {
-    url.pathname = url.pathname.replace("sign-in", "signin");
+  const p = url.pathname;
+  
+  // Standardize social login paths
+  if (p.includes("/social/google")) {
+    // If it's anything like /api/auth/.../social/google, make it the standard signin
+    url.pathname = "/api/auth/signin/social/google";
     return new Request(url, req);
   }
-  if (url.pathname.includes("sign-up")) {
-    url.pathname = url.pathname.replace("sign-up", "signup");
+
+  // General hyphen fix
+  if (p.includes("sign-in")) {
+    url.pathname = p.replace("sign-in", "signin");
+    return new Request(url, req);
+  }
+  if (p.includes("sign-up")) {
+    url.pathname = p.replace("sign-up", "signup");
     return new Request(url, req);
   }
   return req;

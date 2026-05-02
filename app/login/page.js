@@ -52,10 +52,10 @@ function LoginForm() {
   const handleGoogle = async () => {
     setGoogleLoading(true);
     try {
-      // Direct redirect to the correct signin endpoint to avoid hyphen issues
-      const baseUrl = window.location.origin;
-      const callback = encodeURIComponent(window.location.origin + callbackUrl);
-      window.location.href = `${baseUrl}/api/auth/signin/social/google?callbackURL=${callback}`;
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: callbackUrl,
+      });
     } catch (error) {
       console.error("Google login error:", error);
       toast.error("Google sign-in failed.");

@@ -97,9 +97,10 @@ export default function RegisterPage() {
   const handleGoogle = async () => {
     setGoogleLoading(true);
     try {
-      const baseUrl = window.location.origin;
-      const callback = encodeURIComponent(window.location.origin + "/");
-      window.location.href = `${baseUrl}/api/auth/signin/social/google?callbackURL=${callback}`;
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
     } catch (error) {
       console.error("Google login error:", error);
       toast.error("Google sign-in failed.");

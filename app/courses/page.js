@@ -109,21 +109,23 @@ export default function CoursesPage() {
           </div>
 
           {/* Category */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                id={`filter-cat-${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                onClick={() => setCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
-                  category === cat
-                    ? "bg-primary-500 text-white shadow-lg shadow-primary-500/30"
-                    : "bg-white/5 text-white/50 hover:text-white hover:bg-white/10 border border-white/10"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="w-full lg:w-auto overflow-x-auto no-scrollbar -mx-4 px-4 pb-2 lg:pb-0 lg:mx-0 lg:px-0">
+            <div className="flex flex-nowrap lg:flex-wrap gap-2 min-w-max lg:min-w-0">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  id={`filter-cat-${cat.toLowerCase().replace(/\s+/g, "-")}`}
+                  onClick={() => setCategory(cat)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-200 ${
+                    category === cat
+                      ? "bg-primary-500 text-white shadow-lg shadow-primary-500/30"
+                      : "bg-white/5 text-white/50 hover:text-white hover:bg-white/10 border border-white/10"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Level */}
